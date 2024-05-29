@@ -1,7 +1,10 @@
+body{
+    margin: 0;
+}
 .navbar {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px;
     background-color: lightblue;
     
 }
@@ -10,7 +13,7 @@
     justify-content: center;
     align-items: center;
     padding: 10px 20px;
-    background-color: lightblue;
+    background-color: rgb(230, 213, 173);
     border: 2px solid black;
     border-radius: 10px;
     margin: auto;
@@ -26,10 +29,7 @@
     font-size: 30px;
 }
 .profile-img{
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    margin-right: 20px;
+    margin-top: 10px;
     justify-content: center;
     display: flex;
 }
@@ -52,36 +52,126 @@
     font-weight: bold;
 }
 .principal-info{
+    display: flex;
     background-color: rgba(173, 216, 230, 0.452);
     border: 2px solid black;
     border-radius: 10px;
-    margin: auto;
     font-size: 20px;
     font-weight: bold;
     padding: 10px 20px;
 }
+.exp{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
 .exp-laboral{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     padding: 10px 20px;
+    background-color: rgba(173, 216, 230, 0.452);
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0px 5px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    width: 100%;
+}
+.exp-laboral h3, .exp-laboral p{
+    margin: 0%;
+    padding: auto;
+}
+/*Estudios*/
+.perma-info{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(173, 216, 230, 0.452);
+    border: 2px solid black;
+    border-radius: 10px;
+    align-items: center;
+    margin: 10px 5px 0 5px;
+    justify-content: space-between;
+}
+.perma-info i{
+margin: 15px;
+}
+.imguser{
+    margin: 5px;
+}
+.bluebox{
     background-color: rgba(173, 216, 230, 0.452);
     border: 1px solid black;
     border-radius: 10px;
     margin: auto;
     font-size: 20px;
     font-weight: bold;
-    width: 100%;
+    padding: 10px 20px;
+    margin-bottom: 5px;
+
 }
-.exp{
+.estudio{
+    display: flex;
+    flex-direction: column;
+}
+.estudio p{
+    margin: 0;
+}
+.boton{
+    margin: 20px 0 0 20px;
+}
+#boton-basica{
+    border: none;
+    background-color: #04aa6d8a;
+    border-radius: 20px;
+    cursor: pointer;
+
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Times New Roman';
+}
+#boton-media{
+    border: none;
+    background-color: #04aa6d8a;
+    border-radius: 20px;
+    cursor: pointer;
+
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Times New Roman';
+}
+#boton-superior{
+    border: none;
+    background-color: #04aa6d8a;
+    border-radius: 20px;
+    cursor: pointer;
+
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Times New Roman';
+}
+#boton-otros{
+    border: none;
+    background-color: #04aa6d8a;
+    border-radius: 20px;
+    cursor: pointer;
+
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Times New Roman';
+}
+.contenedor-edu{
     display: flex;
     flex-direction: row;
 }
+
 
 @media (max-width: 950px) {
     
     .navbar{
         flex-direction: column;
+        width: 100%;
     }
     .portafolio{
         flex-direction: column;
@@ -94,9 +184,17 @@
     .exp{
         flex-direction: column;
     }
+    /*estudios*/
+    .perma-info{
+        flex-direction: column;
+    }
     
 }
-
+@media (max-width: 450px){
+    .centrado{
+        flex-direction: column;
+    }
+}
 
 
 

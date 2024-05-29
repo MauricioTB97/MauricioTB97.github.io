@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudios M.T.B</title>
+    <link rel="stylesheet" href="/all.css">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body bgcolor="#FFF6F3">
+    <header align="Right">
+        <nav class="navbar">
+            <div class="portafolio">
+                <h1>Estudios</h1>
+            </div>
+            <div class="estudios"> <a href="index.html">Principal</a> </div>
+            <div class="proyectos"> <a href="proyectos.html">Proyectos</a> </div>
+            <div class="contactos"> <a href="contactos.html">Contacto</a> </div>
+        </nav>
+    </header>
+    <main>
+        <div class="perma-info">
+            <div class="imguser"><img src="/img/user.png" title="user-img"> </div>
+            <div class="centrado">
+                <h1>Mauricio Torrez Beltrán</h1>
+                <div class="centrado"><i class="fa-solid fa-gamepad"></i></div>
+                <div class="centrado">
+                    <h2>Ing. Desarrollo de Videouegos</h2>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <!--Basica-->
+            <div class="contenedor-edu">
+                <h1>Básica </h1>
+                <div class="boton">
+                    <button id="boton-basica" onclick="mostrarbasica()"><img src="img/flecha-abajo.png" alt="Mas-Menos"
+                            width="30px"></button>
+                </div>
+            </div>
+            <div id="info-basica" style="display: none;">
+                <div class="bluebox">
+                    <h3><i class="fa-solid fa-book"></i> Primaria</h3>
+                    <div class="estudio">
+                        <p>Escuela Primaria Ejemplo</p>
+                        <p>Av Michoacán 328, Melchor Ocampo, 58160 Morelia, Mich.</p>
+                        <p>Generacion: 2004 - 2009</p>
+                    </div>
+                </div>
+                <div class="bluebox">
+                    <h3><i class="fa-solid fa-book"></i> Secundaria</h3>
+                    <div class="estudio">
+                        <p>Escuela Secundaria Ejemplo</p>
+                        <p>Av Michoacán 328, Melchor Ocampo, 58160 Morelia, Mich.</p>
+                        <p>Generacion: 2009 - 2012</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Media-->
+            <div class="contenedor-edu">
+                <h1>Media Superior </h1>
+                <div class="boton">
+                    <button id="boton-media" onclick="mostrarmedia()"><img src="img/flecha-abajo.png" alt="Mas-Menos"
+                            width="30px"></button>
+                </div>
+            </div>
+            <div id="info-media" style="display: none;">
+                <div class="bluebox">
+                    <h3><i class="fa-solid fa-book"></i> Bachillerato Tecnologico</h3>
+                    <div class="estudio">
+                        <p>CETis #120</p>
+                        <p>Av Francisco I. Madero Ote 4923, Cd Industrial, 58200 Morelia, Mich.</p>
+                        <p>Generacion: 2012 - 2015</p>
+                    </div>
+                </div>
+            </div>
+            <!--Superior-->
+            <div class="contenedor-edu">
+                <h1>Superior</h1>
+                <div class="boton">
+                    <button id="boton-superior" onclick="mostrarsuperior()"><img src="img/flecha-abajo.png" alt="Mas-Menos"
+                            width="30px"></button>
+                </div>
+            </div>
+            <div id="info-superior" style="display: none;">
+                <div class="bluebox">
+                    <h3><i class="fa-solid fa-book"></i> Bachillerato Tecnologico</h3>
+                    <div class="estudio">
+                        <p>CETis #120</p>
+                        <p>Av Francisco I. Madero Ote 4923, Cd Industrial, 58200 Morelia, Mich.</p>
+                        <p>Generacion: 2012 - 2015</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Otros-->
+            <div class="contenedor-edu">
+                <h1>Otros Estudios</h1>
+                <div class="boton">
+                    <button id="boton-otros" onclick="mostrarotros()"><img src="img/flecha-abajo.png" alt="Mas-Menos"
+                            width="30px"></button>
+                </div>
+            </div>
+            <div id="info-otros" style="display: none;">
+                <div class="bluebox">
+                    <h3>Titulo</h3>
+                    <div class="estudio">
+                        <p>Descripcion</p>
+                    </div>
+                    <h3>Titulo</h3>
+                    <div class="estudio">
+                        <p>Descripcion</p>
+                    </div>
+                </div>
+            </div>
+           
+
+        </div>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
