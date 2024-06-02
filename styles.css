@@ -5,7 +5,7 @@ body{
     display: flex;
     align-items: center;
     padding: 10px;
-    background-color: lightblue;
+    background-color: #add8e6;
     
 }
 .estudios, .contactos, .proyectos{
@@ -13,7 +13,7 @@ body{
     justify-content: center;
     align-items: center;
     padding: 10px 20px;
-    background-color: rgb(230, 213, 173);
+    background-color: #e6d5ad;
     border: 2px solid black;
     border-radius: 10px;
     margin: auto;
@@ -37,19 +37,22 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    
 }
 .acerca{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px 20px;
-    background-color: rgba(173, 216, 230, 0.452);
+    background-color: #add8e673;
     border: 1px solid black;
     border-radius: 10px;
-    margin: auto;
+    margin: 0 15px 0 15px;
     font-size: 20px;
     font-weight: bold;
+}
+.titulo{
+    margin: 15px 30px 15px 30px;
 }
 .principal-info{
     display: flex;
@@ -59,11 +62,15 @@ body{
     font-size: 20px;
     font-weight: bold;
     padding: 10px 20px;
+    max-width: 1100px;
+    margin: auto;
+    justify-content: space-evenly;
 }
 .exp{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+
 
 }
 .exp-laboral{
@@ -78,6 +85,8 @@ body{
     font-weight: bold;
     margin-bottom: 5px;
     width: 100%;
+    line-height: 30px;
+    
 }
 .exp-laboral h3, .exp-laboral p{
     margin: 0%;
@@ -91,8 +100,10 @@ body{
     border: 2px solid black;
     border-radius: 10px;
     align-items: center;
-    margin: 10px 5px 0 5px;
-    justify-content: space-between;
+    margin: auto;
+    max-width: 1100px;
+    justify-content: space-evenly;
+    margin-top: 10px;
 }
 .perma-info i{
 margin: 15px;
@@ -108,7 +119,8 @@ margin: 15px;
     font-size: 20px;
     font-weight: bold;
     padding: 10px 20px;
-    margin-bottom: 5px;
+   
+    margin: 0 20px 10px 20px;
 
 }
 .estudio{
@@ -192,6 +204,9 @@ margin: 15px;
 }
 @media (max-width: 450px){
     .centrado{
+        flex-direction: column;
+    }
+    .principal-info{
         flex-direction: column;
     }
 }
