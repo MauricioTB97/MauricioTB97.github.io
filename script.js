@@ -1,3 +1,5 @@
+
+
 function mostrarbasica() {
     var texto = document.getElementById("info-basica");
     var boton = document.getElementById("boton-basica");
@@ -52,3 +54,23 @@ function mostrarotros() {
         imagen.src = "img/flecha-abajo.png"; // Si no es "flecha-abajo", cambia a "flecha-abajo"
     }
 }
+
+//codigo carrusel
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+
+  });

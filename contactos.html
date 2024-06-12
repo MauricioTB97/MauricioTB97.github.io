@@ -1,11 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contacto</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="all.css">
 </head>
+
 <body bgcolor="#FFF6F3">
-    
+    <header align="Right">
+        <nav class="navbar">
+            <div class="portafolio">
+                <h1>Contacto</h1>
+            </div>
+            <div class="contactos"> <a href="index.html">Principal</a> </div>
+            <div class="estudios"> <a href="estudios.html">Estudios</a> </div>
+            <div class="proyectos"> <a href="proyectos.html">Proyectos</a> </div>
+        </nav>
+    </header>
+    <main>
+        <div class="perma-info">
+            <div class="imguser"><img src="img/user.png" title="user-img"> </div>
+            <div class="centrado">
+                <h1>Mauricio Torrez Beltrán</h1>
+                <div class="centrado"><i class="fa-solid fa-gamepad"></i></div>
+                <div class="centrado">
+                    <h2>Ing. Desarrollo de Videouegos</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="contenedor">
+            <div class="contactos-info">
+                <div class="sombreado">
+                    <h2 class="titulo">CORREO</h2>
+                </div>
+                <p>mauriciotorrez08@gmail.com</p>
+
+                <div class="sombreado2">
+                    <h2 class="titulo">TELÉFONO</h2>
+                </div>
+                <p>+52-33-27-03-36-44</p>
+
+                <div class="sombreado2">
+                    <h2 class="titulo">GITHUB</h2>
+                </div>
+                <p><a href="https://github.com/MauricioTB97">MauricioTB97</a></p>
+
+                <div class="sombreado2">
+                    <h2 class="titulo">REDES SOCIALES</h2>
+                </div>
+                <div class="redes">
+                    <a href="https://twitter.com/MauricioTB97"><i class="fa-brands fa-x-twitter"></i> Twitter</a>
+                    <a href="https://www.linkedin.com/in/mauriciotorrezbeltran/"><i class="fa-brands fa-linkedin"></i>
+                        LinkedIn</a>
+                    <a href="https://www.instagram.com/mauriciotorrezbeltran/"><i
+                            class="fa-brands fa-instagram"></i></i> Instagram</a>
+                </div>
+
+            </div>
+            <div class="animacion">
+                <canvas id="gameCanvas"></canvas>
+                <script>
+                    const canvas = document.getElementById('gameCanvas');
+                    const ctx = canvas.getContext('2d');
+                    const spriteWidth = 150;
+                    const spriteHeight = 200;
+                    const spriteImage = new Image();
+                    spriteImage.src = 'img2.jpg'; // Asegúrate de que la ruta de la imagen sea correcta
+
+                    let currentFrame = 0;
+                    let frameCount = 0;
+                    let jumping = false;
+                    let jumpHeight = 0;
+                    let jumpSpeed = 10;
+                    let gravity = 1;
+                    let y = canvas.height - spriteHeight;
+                    let currentRow = 0;
+
+                    document.addEventListener('keydown', (event) => {
+                        if (event.key === 'ArrowUp' && !jumping) {
+                            jumping = true;
+                            jumpSpeed = 10;
+                            currentRow = 1;
+                        }
+                    });
+
+                    function draw() {
+                        ctx.clearRect(0, 0, canvas.width, canvas.height);
+                        ctx.drawImage(spriteImage, currentFrame * spriteWidth, currentRow * spriteHeight, spriteWidth, spriteHeight, 0, y, spriteWidth, spriteHeight);
+
+                        frameCount++;
+                        if (frameCount % 10 === 0) {
+                            currentFrame = (currentFrame + 1) % 4;
+                        }
+
+                        if (jumping) {
+                            y -= jumpSpeed;
+                            jumpSpeed -= gravity;
+
+                            if (y >= canvas.height - spriteHeight) {
+                                jumping = false;
+                                y = canvas.height - spriteHeight;
+                                currentRow = 0;
+                            }
+                        }
+                        requestAnimationFrame(draw);
+                    }
+                    spriteImage.onload = draw;
+
+
+                </script>
+
+
+            </div>
+        </div>
+    </main>
+
 </body>
+<script src="anim.js"></script>
+
 </html>
